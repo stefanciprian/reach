@@ -4,9 +4,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/stefanciprian/reach/config"
-	"github.com/stefanciprian/reach/models"
-	"github.com/stefanciprian/reach/routes"
+	"github.com/stefanciprian/reach/reach-api/config"
+	"github.com/stefanciprian/reach/reach-api/models"
+	"github.com/stefanciprian/reach/reach-api/routes"
 
 	"github.com/bamzi/jobrunner"
 	_ "github.com/heroku/x/hmetrics/onload"
