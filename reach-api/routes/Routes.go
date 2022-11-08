@@ -9,6 +9,7 @@ import (
 
 	"github.com/bamzi/jobrunner"
 	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
@@ -23,27 +24,37 @@ func SetupRouter() *gin.Engine {
 	router.Use(gin.Logger())
 	router.Use(cors.Default())
 
-	router.LoadHTMLGlob("reach-api/templates/*.tmpl.html")
+	// Serve frontend static files
+	router.Use(static.Serve("/", static.LocalFile("./reach-client/build", true)))
 
-	router.Static("reach-api/static", "static")
+	// Setup route group for the API
+	api := router.Group("/api")
+	{
+		api.GET("hello", controllers.Hello)
 
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl.html", nil)
-	})
+		// Resource to return the JSON data
+		api.GET("/jobrunner/json", func(c *gin.Context) {
+			// returns a map[string]interface{} that can be marshalled as JSON
+			c.JSON(http.StatusOK, jobrunner.StatusJson())
+		})
+	}
 
-	// Resource to return the JSON data
-	router.GET("/jobrunner/json", func(c *gin.Context) {
-		// returns a map[string]interface{} that can be marshalled as JSON
-		c.JSON(http.StatusOK, jobrunner.StatusJson())
-	})
-
-	// Returns html page at given endpoint based on the loaded
-	router.GET("/jobrunner/html", func(c *gin.Context) {
-		// Returns the template data pre-parsed
-		c.HTML(http.StatusOK, "status.tmpl.html", jobrunner.StatusPage())
-	})
-
-	router.GET("hello", controllers.Hello)
+	userTests := api.Group("/users")
+	{
+		userTests.GET("user", controllers.GetUserTests)
+		userTests.POST("user", controllers.CreateUserTest)
+		userTests.GET("user/:id", controllers.GetUserTestByID)
+		userTests.PUT("user/:id", controllers.UpdateUserTest)
+		userTests.DELETE("user/:id", controllers.DeleteUserTest)
+	}
+	settings := api.Group("/settings")
+	{
+		settings.GET("setting", controllers.GetSettings)
+		settings.POST("setting", controllers.CreateSetting)
+		settings.GET("setting/:id", controllers.GetSettingByID)
+		settings.PUT("setting/:id", controllers.UpdateSetting)
+		settings.DELETE("setting/:id", controllers.DeleteSetting)
+	}
 
 	return router
 }
