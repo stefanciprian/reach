@@ -30,7 +30,10 @@ func main() {
 	}
 
 	defer config.DB.Close()
-	config.DB.AutoMigrate(&models.UserTest{}, &models.Setting{})
+	config.DB.AutoMigrate(
+		&models.DefinitionModel{},
+		&models.SettingModel{},
+		&models.UserModel{})
 
 	// Schedulers
 	jobrunner.Start()

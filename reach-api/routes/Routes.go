@@ -41,11 +41,11 @@ func SetupRouter() *gin.Engine {
 
 	userTests := api.Group("/users")
 	{
-		userTests.GET("user", controllers.GetUserTests)
-		userTests.POST("user", controllers.CreateUserTest)
-		userTests.GET("user/:id", controllers.GetUserTestByID)
-		userTests.PUT("user/:id", controllers.UpdateUserTest)
-		userTests.DELETE("user/:id", controllers.DeleteUserTest)
+		userTests.GET("user", controllers.GetUser)
+		userTests.POST("user", controllers.CreateUser)
+		userTests.GET("user/:id", controllers.GetUserByID)
+		userTests.PUT("user/:id", controllers.UpdateUser)
+		userTests.DELETE("user/:id", controllers.DeleteUser)
 	}
 	settings := api.Group("/settings")
 	{

@@ -56,6 +56,7 @@ func BuildDBConfig() *DBConfig {
 	}
 	return &dbConfig
 }
+
 func DbURL(dbConfig *DBConfig) string {
 	return fmt.Sprintf(
 		"%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",

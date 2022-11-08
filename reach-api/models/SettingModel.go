@@ -1,11 +1,11 @@
 package models
 
-type Setting struct {
+type SettingModel struct {
 	Id    uint   `json:"id"`
 	Name  string `json:"name"`
 	Value string `json:"value"`
 }
 
-func (b *Setting) TableName() string {
+func (b *SettingModel) TableName() string {
 	return "setting"
 }
