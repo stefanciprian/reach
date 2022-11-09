@@ -3,9 +3,8 @@ package routes
 import (
 	"net/http"
 
-	"github.com/stefanciprian/reach/reach-api/controllers"
-
-	"github.com/stefanciprian/reach/reach-api/config"
+	"reach/reach-api/config"
+	"reach/reach-api/controllers"
 
 	"github.com/bamzi/jobrunner"
 	"github.com/gin-contrib/cors"

@@ -4,9 +4,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/stefanciprian/reach/reach-api/config"
-	"github.com/stefanciprian/reach/reach-api/models"
-	"github.com/stefanciprian/reach/reach-api/routes"
+	"reach/reach-api/config"
+	"reach/reach-api/models"
+	"reach/reach-api/routes"
 
 	"github.com/bamzi/jobrunner"
 	_ "github.com/heroku/x/hmetrics/onload"
@@ -31,8 +31,12 @@ func main() {
 
 	defer config.DB.Close()
 	config.DB.AutoMigrate(
+		&models.CaseModel{},
 		&models.DefinitionModel{},
+		&models.InputModel{},
+		&models.OutputModel{},
 		&models.SettingModel{},
+		&models.TransformerModel{},
 		&models.UserModel{})
 
 	// Schedulers

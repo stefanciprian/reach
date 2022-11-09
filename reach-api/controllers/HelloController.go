@@ -3,8 +3,9 @@ package controllers
 import (
 	"net/http"
 
+	"reach/reach-api/services"
+
 	"github.com/gin-gonic/gin"
-	"github.com/stefanciprian/reach/reach-api/services"
 )
 
 func Hello(c *gin.Context) {

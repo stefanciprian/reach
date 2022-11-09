@@ -3,8 +3,8 @@ package repositories
 import (
 	"fmt"
 
-	"github.com/stefanciprian/reach/reach-api/config"
-	"github.com/stefanciprian/reach/reach-api/models"
+	"reach/reach-api/config"
+	"reach/reach-api/models"
 
 	_ "github.com/go-sql-driver/mysql"
 )

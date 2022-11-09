@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
+	"reach/reach-api/models"
+	"reach/reach-api/repositories"
+
 	"github.com/gin-gonic/gin"
-	"github.com/stefanciprian/reach/reach-api/models"
-	"github.com/stefanciprian/reach/reach-api/repositories"
 )
 
 func GetSettings(c *gin.Context) {
