@@ -25,7 +25,7 @@ COPY --from=builder /reach/static/ static/
 
 ENV GIN_MODE=release
 
-ENV PORT=5003
+ENV PORT=1989
 
 EXPOSE $PORT
 

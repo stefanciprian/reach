@@ -1,4 +1,4 @@
 ---select * from mysql;
+---show databases;
 
-show databases;
-
+select * from mysql.case;
