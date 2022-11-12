@@ -33,8 +33,9 @@ func main() {
 	config.DB.AutoMigrate(
 		&models.CaseModel{},
 		&models.DefinitionModel{},
-		&models.InputModel{},
-		&models.OutputModel{},
+		&models.InputSourceModel{},
+		&models.OutputSourceModel{},
+		&models.ReplyModel{},
 		&models.SettingModel{},
 		&models.TransformerModel{},
 		&models.UserModel{})

@@ -36,6 +36,42 @@ func SetupRouter() *gin.Engine {
 			// returns a map[string]interface{} that can be marshalled as JSON
 			c.JSON(http.StatusOK, jobrunner.StatusJson())
 		})
+
+		api.GET("case", controllers.GetCase)
+		api.POST("case", controllers.CreateCase)
+		api.GET("case/:id", controllers.GetCaseByID)
+		api.PUT("case/:id", controllers.UpdateCase)
+		api.DELETE("case/:id", controllers.DeleteCase)
+
+		api.GET("definition", controllers.GetDefinition)
+		api.POST("definition", controllers.CreateDefinition)
+		api.GET("definition/:id", controllers.GetDefinitionByID)
+		api.PUT("definition/:id", controllers.UpdateDefinition)
+		api.DELETE("definition/:id", controllers.DeleteDefinition)
+
+		api.GET("input-source", controllers.GetInputSource)
+		api.POST("input-source", controllers.CreateInputSource)
+		api.GET("input-source/:id", controllers.GetInputSourceByID)
+		api.PUT("input-source/:id", controllers.UpdateInputSource)
+		api.DELETE("input-source/:id", controllers.DeleteInputSource)
+
+		api.GET("output-source", controllers.GetOutputSource)
+		api.POST("output-source", controllers.CreateOutputSource)
+		api.GET("output-source/:id", controllers.GetOutputSourceByID)
+		api.PUT("output-source/:id", controllers.UpdateOutputSource)
+		api.DELETE("output-source/:id", controllers.DeleteOutputSource)
+
+		api.GET("reply", controllers.GetReply)
+		api.POST("reply", controllers.CreateReply)
+		api.GET("reply/:id", controllers.GetReplyByID)
+		api.PUT("reply/:id", controllers.UpdateReply)
+		api.DELETE("reply/:id", controllers.DeleteReply)
+
+		api.GET("transformer", controllers.GetTransformer)
+		api.POST("transformer", controllers.CreateTransformer)
+		api.GET("transformer/:id", controllers.GetTransformerByID)
+		api.PUT("transformer/:id", controllers.UpdateTransformer)
+		api.DELETE("transformer/:id", controllers.DeleteTransformer)
 	}
 
 	userTests := api.Group("/users")
