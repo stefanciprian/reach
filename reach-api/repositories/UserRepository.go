@@ -1,8 +1,6 @@
 package repositories
 
 import (
-	"fmt"
-
 	"reach/reach-api/config"
 	"reach/reach-api/models"
 
@@ -31,7 +29,6 @@ func GetUserByID(user *models.UserModel, id string) (err error) {
 }
 
 func UpdateUser(user *models.UserModel, id string) (err error) {
-	fmt.Println(user)
 	config.DB.Save(user)
 	return nil
 }

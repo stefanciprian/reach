@@ -12,6 +12,10 @@ schedule:
   - reach-api/schedule/**/*
 services:
   - reach-api/services/**/*
+tests-models:
+  - reach-api/tests/models/**/*
+tests-repositories:
+  - reach-api/tests/repositories/**/*
 fe-public:
   - reach-client/public/**/*
 fe-src:
