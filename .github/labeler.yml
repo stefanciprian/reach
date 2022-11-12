@@ -1,0 +1,19 @@
+config:
+  - reach-api/config/**/*
+controllers:
+  - reach-api/controllers/**/*
+models:
+  - reach-api/models/**/*
+repositories:
+  - reach-api/repositories/**/*
+routes:
+  - reach-api/routes/**/*
+schedule:
+  - reach-api/schedule/**/*
+services:
+  - reach-api/services/**/*
+fe-public:
+  - reach-client/public/**/*
+fe-src:
+  - reach-client/src/**/*
+
