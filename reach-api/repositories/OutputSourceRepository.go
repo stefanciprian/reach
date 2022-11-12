@@ -1,8 +1,6 @@
 package repositories
 
 import (
-	"fmt"
-
 	"reach/reach-api/config"
 	"reach/reach-api/models"
 
@@ -31,7 +29,6 @@ func GetOutputSourceByID(outputSource *models.OutputSourceModel, id string) (err
 }
 
 func UpdateOutputSource(outputSource *models.OutputSourceModel, id string) (err error) {
-	fmt.Println(outputSource)
 	config.DB.Save(outputSource)
 	return nil
 }

@@ -1,8 +1,6 @@
 package repositories
 
 import (
-	"fmt"
-
 	"reach/reach-api/config"
 	"reach/reach-api/models"
 
@@ -31,7 +29,6 @@ func GetCaseByID(caseModel *models.CaseModel, id string) (err error) {
 }
 
 func UpdateCase(caseModel *models.CaseModel, id string) (err error) {
-	fmt.Println(caseModel)
 	config.DB.Save(caseModel)
 	return nil
 }

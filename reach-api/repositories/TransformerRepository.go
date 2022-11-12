@@ -1,8 +1,6 @@
 package repositories
 
 import (
-	"fmt"
-
 	"reach/reach-api/config"
 	"reach/reach-api/models"
 
@@ -31,7 +29,6 @@ func GetTransformerByID(transformer *models.TransformerModel, id string) (err er
 }
 
 func UpdateTransformer(transformer *models.TransformerModel, id string) (err error) {
-	fmt.Println(transformer)
 	config.DB.Save(transformer)
 	return nil
 }

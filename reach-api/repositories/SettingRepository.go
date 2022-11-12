@@ -1,8 +1,6 @@
 package repositories
 
 import (
-	"fmt"
-
 	"reach/reach-api/config"
 	"reach/reach-api/models"
 
@@ -31,7 +29,6 @@ func GetSettingByID(setting *models.SettingModel, id string) (err error) {
 }
 
 func UpdateSetting(setting *models.SettingModel, id string) (err error) {
-	fmt.Println(setting)
 	config.DB.Save(setting)
 	return nil
 }
