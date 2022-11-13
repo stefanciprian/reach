@@ -10,6 +10,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Get Transformer godoc
+// @Summary get transformer endpoint
+// @Schemes
+// @Description get transformer endpoint
+// @Tags transformer
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /transformer [get]
 func GetTransformer(c *gin.Context) {
 	var transformer []models.TransformerModel
 	err := repositories.GetAllTransformers(&transformer)
@@ -20,6 +29,15 @@ func GetTransformer(c *gin.Context) {
 	}
 }
 
+// Post Transformer godoc
+// @Summary post transformer endpoint
+// @Schemes
+// @Description post transformer endpoint
+// @Tags transformer
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /transformer [post]
 func CreateTransformer(c *gin.Context) {
 	var transformer models.TransformerModel
 	c.BindJSON(&transformer)
@@ -32,6 +50,15 @@ func CreateTransformer(c *gin.Context) {
 	}
 }
 
+// Get Transformer by Id godoc
+// @Summary get transformer by id endpoint
+// @Schemes
+// @Description get transformer by id endpoint
+// @Tags transformer
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /transformer/:id [get]
 func GetTransformerByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var transformer models.TransformerModel
@@ -43,6 +70,15 @@ func GetTransformerByID(c *gin.Context) {
 	}
 }
 
+// Update Transformer godoc
+// @Summary update transformer endpoint
+// @Schemes
+// @Description update transformer endpoint
+// @Tags transformer
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /transformer [put]
 func UpdateTransformer(c *gin.Context) {
 	var transformer models.TransformerModel
 	id := c.Params.ByName("id")
@@ -59,6 +95,15 @@ func UpdateTransformer(c *gin.Context) {
 	}
 }
 
+// Delete Transformer godoc
+// @Summary delete transformer endpoint
+// @Schemes
+// @Description delete transformer endpoint
+// @Tags transformer
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /transformer [delete]
 func DeleteTransformer(c *gin.Context) {
 	var transformer models.TransformerModel
 	id := c.Params.ByName("id")

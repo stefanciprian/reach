@@ -1,0 +1,595 @@
+info:
+  contact: {}
+paths:
+  /case:
+    delete:
+      consumes:
+      - application/json
+      description: delete case endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete case endpoint
+      tags:
+      - case
+    get:
+      consumes:
+      - application/json
+      description: get case endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get case endpoint
+      tags:
+      - case
+    post:
+      consumes:
+      - application/json
+      description: post case endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post case endpoint
+      tags:
+      - case
+    put:
+      consumes:
+      - application/json
+      description: update case endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update case endpoint
+      tags:
+      - case
+  /case/:id:
+    get:
+      consumes:
+      - application/json
+      description: get case by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get case by id endpoint
+      tags:
+      - case
+  /definition:
+    delete:
+      consumes:
+      - application/json
+      description: delete definition endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete definition endpoint
+      tags:
+      - definition
+    get:
+      consumes:
+      - application/json
+      description: get definition endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get definition endpoint
+      tags:
+      - definition
+    post:
+      consumes:
+      - application/json
+      description: post definition endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post definition endpoint
+      tags:
+      - definition
+    put:
+      consumes:
+      - application/json
+      description: update definition endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update definition endpoint
+      tags:
+      - definition
+  /definition/:id:
+    get:
+      consumes:
+      - application/json
+      description: get definition by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get definition by id endpoint
+      tags:
+      - definition
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: say hello
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: hello endpoint
+      tags:
+      - hello
+  /input-source:
+    delete:
+      consumes:
+      - application/json
+      description: delete input-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete input-source endpoint
+      tags:
+      - input-source
+    get:
+      consumes:
+      - application/json
+      description: get input-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get input-source endpoint
+      tags:
+      - input-source
+    post:
+      consumes:
+      - application/json
+      description: post input-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post input-source endpoint
+      tags:
+      - input-source
+    put:
+      consumes:
+      - application/json
+      description: update input-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update input-source endpoint
+      tags:
+      - input-source
+  /input-source/:id:
+    get:
+      consumes:
+      - application/json
+      description: get input-source by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get input-source by id endpoint
+      tags:
+      - input-source
+  /output-source:
+    delete:
+      consumes:
+      - application/json
+      description: delete output-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete output-source endpoint
+      tags:
+      - output-source
+    get:
+      consumes:
+      - application/json
+      description: get output-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get output-source endpoint
+      tags:
+      - output-source
+    post:
+      consumes:
+      - application/json
+      description: post output-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post output-source endpoint
+      tags:
+      - output-source
+    put:
+      consumes:
+      - application/json
+      description: update output-source endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update output-source endpoint
+      tags:
+      - output-source
+  /output-source/:id:
+    get:
+      consumes:
+      - application/json
+      description: get output-source by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get output-source by id endpoint
+      tags:
+      - output-source
+  /reply:
+    delete:
+      consumes:
+      - application/json
+      description: delete reply endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete reply endpoint
+      tags:
+      - reply
+    get:
+      consumes:
+      - application/json
+      description: get reply endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get reply endpoint
+      tags:
+      - reply
+    post:
+      consumes:
+      - application/json
+      description: post reply endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post reply endpoint
+      tags:
+      - reply
+    put:
+      consumes:
+      - application/json
+      description: update reply endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update reply endpoint
+      tags:
+      - reply
+  /reply/:id:
+    get:
+      consumes:
+      - application/json
+      description: get reply by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get reply by id endpoint
+      tags:
+      - reply
+  /settings/setting:
+    delete:
+      consumes:
+      - application/json
+      description: delete setting endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete setting endpoint
+      tags:
+      - setting
+    get:
+      consumes:
+      - application/json
+      description: get setting endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get setting endpoint
+      tags:
+      - setting
+    post:
+      consumes:
+      - application/json
+      description: post setting endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post setting endpoint
+      tags:
+      - setting
+    put:
+      consumes:
+      - application/json
+      description: update setting endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update setting endpoint
+      tags:
+      - setting
+  /settings/setting/:id:
+    get:
+      consumes:
+      - application/json
+      description: get setting by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get setting by id endpoint
+      tags:
+      - setting
+  /transformer:
+    delete:
+      consumes:
+      - application/json
+      description: delete transformer endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete transformer endpoint
+      tags:
+      - transformer
+    get:
+      consumes:
+      - application/json
+      description: get transformer endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get transformer endpoint
+      tags:
+      - transformer
+    post:
+      consumes:
+      - application/json
+      description: post transformer endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post transformer endpoint
+      tags:
+      - transformer
+    put:
+      consumes:
+      - application/json
+      description: update transformer endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update transformer endpoint
+      tags:
+      - transformer
+  /transformer/:id:
+    get:
+      consumes:
+      - application/json
+      description: get transformer by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get transformer by id endpoint
+      tags:
+      - transformer
+  /users/user:
+    delete:
+      consumes:
+      - application/json
+      description: delete user endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: delete user endpoint
+      tags:
+      - user
+    get:
+      consumes:
+      - application/json
+      description: get user endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get user endpoint
+      tags:
+      - user
+    post:
+      consumes:
+      - application/json
+      description: post user endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: post user endpoint
+      tags:
+      - user
+    put:
+      consumes:
+      - application/json
+      description: update user endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: update user endpoint
+      tags:
+      - user
+  /users/user/:id:
+    get:
+      consumes:
+      - application/json
+      description: get user by id endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: param
+      summary: get user by id endpoint
+      tags:
+      - user
+swagger: "2.0"

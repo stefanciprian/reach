@@ -10,12 +10,19 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
+
+	docs "reach/docs"
+
+	swaggerfiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func SetupRouter() *gin.Engine {
 	sess := config.ConnectAws()
 
 	router := gin.Default()
+	docs.SwaggerInfo.BasePath = "/api"
+
 	router.Use(func(c *gin.Context) {
 		c.Set("sess", sess)
 		c.Next()
@@ -25,6 +32,8 @@ func SetupRouter() *gin.Engine {
 
 	// Serve frontend static files
 	router.Use(static.Serve("/", static.LocalFile("./reach-client/build", true)))
+
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 
 	// Setup route group for the API
 	api := router.Group("/api")
