@@ -7,10 +7,11 @@ import (
 
 func TestDefinitionModel_TableName(t *testing.T) {
 	type fields struct {
-		Id                uint
-		Name              string
-		CaseId            uint
-		InputSourceModels []models.InputSourceModel
+		Id            uint
+		Name          string
+		InputSource   models.InputSourceModel
+		OutputSources []models.OutputSourceModel
+		Transformers  []models.TransformerModel
 	}
 	tests := []struct {
 		name   string
@@ -22,10 +23,10 @@ func TestDefinitionModel_TableName(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			b := &models.DefinitionModel{
-				Id:                tt.fields.Id,
-				Name:              tt.fields.Name,
-				CaseId:            tt.fields.CaseId,
-				InputSourceModels: tt.fields.InputSourceModels,
+				Name:          tt.fields.Name,
+				InputSource:   tt.fields.InputSource,
+				OutputSources: tt.fields.OutputSources,
+				Transformers:  tt.fields.Transformers,
 			}
 			if got := b.TableName(); got != tt.want {
 				t.Errorf("DefinitionModel.TableName() = %v, want %v", got, tt.want)

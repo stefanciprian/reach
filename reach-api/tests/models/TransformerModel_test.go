@@ -18,9 +18,7 @@ func TestTransformerModel_TableName(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			b := &models.TransformerModel{
-				Id: tt.fields.Id,
-			}
+			b := &models.TransformerModel{}
 			if got := b.TableName(); got != tt.want {
 				t.Errorf("TransformerModel.TableName() = %v, want %v", got, tt.want)
 			}

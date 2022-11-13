@@ -22,7 +22,6 @@ func TestInputSourceModel_TableName(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			b := &models.InputSourceModel{
-				Id:     tt.fields.Id,
 				Name:   tt.fields.Name,
 				Config: tt.fields.Config,
 				Type:   tt.fields.Type,

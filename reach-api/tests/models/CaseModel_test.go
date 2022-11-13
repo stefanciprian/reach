@@ -7,9 +7,9 @@ import (
 
 func TestCaseModel_TableName(t *testing.T) {
 	type fields struct {
-		Id           uint
-		Payload      string
-		DefinitionId uint
+		Id         uint
+		Payload    string
+		Definition models.DefinitionModel
 	}
 	tests := []struct {
 		name   string
@@ -21,9 +21,8 @@ func TestCaseModel_TableName(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			b := &models.CaseModel{
-				Id:           tt.fields.Id,
-				Payload:      tt.fields.Payload,
-				DefinitionId: tt.fields.DefinitionId,
+				Payload:    tt.fields.Payload,
+				Definition: tt.fields.Definition,
 			}
 			if got := b.TableName(); got != tt.want {
 				t.Errorf("CaseModel.TableName() = %v, want %v", got, tt.want)
