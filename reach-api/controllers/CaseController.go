@@ -10,6 +10,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Get Case godoc
+// @Summary get case endpoint
+// @Schemes
+// @Description get case endpoint
+// @Tags case
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /case [get]
 func GetCase(c *gin.Context) {
 	var caseModel []models.CaseModel
 	err := repositories.GetAllCases(&caseModel)
@@ -20,6 +29,15 @@ func GetCase(c *gin.Context) {
 	}
 }
 
+// Post Case godoc
+// @Summary post case endpoint
+// @Schemes
+// @Description post case endpoint
+// @Tags case
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /case [post]
 func CreateCase(c *gin.Context) {
 	var caseModel models.CaseModel
 	c.BindJSON(&caseModel)
@@ -32,6 +50,15 @@ func CreateCase(c *gin.Context) {
 	}
 }
 
+// Get Case by Id godoc
+// @Summary get case by id endpoint
+// @Schemes
+// @Description get case by id endpoint
+// @Tags case
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /case/:id [get]
 func GetCaseByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var caseModel models.CaseModel
@@ -43,6 +70,15 @@ func GetCaseByID(c *gin.Context) {
 	}
 }
 
+// Update Case godoc
+// @Summary update case endpoint
+// @Schemes
+// @Description update case endpoint
+// @Tags case
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /case [put]
 func UpdateCase(c *gin.Context) {
 	var caseModel models.CaseModel
 	id := c.Params.ByName("id")
@@ -59,6 +95,15 @@ func UpdateCase(c *gin.Context) {
 	}
 }
 
+// Delete Case godoc
+// @Summary delete case endpoint
+// @Schemes
+// @Description delete case endpoint
+// @Tags case
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /case [delete]
 func DeleteCase(c *gin.Context) {
 	var caseModel models.CaseModel
 	id := c.Params.ByName("id")

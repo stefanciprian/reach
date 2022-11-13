@@ -10,6 +10,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Get OutputSource godoc
+// @Summary get output-source endpoint
+// @Schemes
+// @Description get output-source endpoint
+// @Tags output-source
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /output-source [get]
 func GetOutputSource(c *gin.Context) {
 	var outputSource []models.OutputSourceModel
 	err := repositories.GetAllOutputSources(&outputSource)
@@ -20,6 +29,15 @@ func GetOutputSource(c *gin.Context) {
 	}
 }
 
+// Post OutputSource godoc
+// @Summary post output-source endpoint
+// @Schemes
+// @Description post output-source endpoint
+// @Tags output-source
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /output-source [post]
 func CreateOutputSource(c *gin.Context) {
 	var outputSource models.OutputSourceModel
 	c.BindJSON(&outputSource)
@@ -32,6 +50,15 @@ func CreateOutputSource(c *gin.Context) {
 	}
 }
 
+// Get OutputSource by Id godoc
+// @Summary get output-source by id endpoint
+// @Schemes
+// @Description get output-source by id endpoint
+// @Tags output-source
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /output-source/:id [get]
 func GetOutputSourceByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var outputSource models.OutputSourceModel
@@ -43,6 +70,15 @@ func GetOutputSourceByID(c *gin.Context) {
 	}
 }
 
+// Update OutputSource godoc
+// @Summary update output-source endpoint
+// @Schemes
+// @Description update output-source endpoint
+// @Tags output-source
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /output-source [put]
 func UpdateOutputSource(c *gin.Context) {
 	var outputSource models.OutputSourceModel
 	id := c.Params.ByName("id")
@@ -59,6 +95,15 @@ func UpdateOutputSource(c *gin.Context) {
 	}
 }
 
+// Delete OutputSource godoc
+// @Summary delete output-source endpoint
+// @Schemes
+// @Description delete output-source endpoint
+// @Tags output-source
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /output-source [delete]
 func DeleteOutputSource(c *gin.Context) {
 	var outputSource models.OutputSourceModel
 	id := c.Params.ByName("id")

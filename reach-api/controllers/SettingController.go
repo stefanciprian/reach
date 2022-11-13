@@ -10,6 +10,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Get Setting godoc
+// @Summary get setting endpoint
+// @Schemes
+// @Description get setting endpoint
+// @Tags setting
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /settings/setting [get]
 func GetSettings(c *gin.Context) {
 	var setting []models.SettingModel
 	err := repositories.GetAllSettings(&setting)
@@ -20,6 +29,15 @@ func GetSettings(c *gin.Context) {
 	}
 }
 
+// Post Setting godoc
+// @Summary post setting endpoint
+// @Schemes
+// @Description post setting endpoint
+// @Tags setting
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /settings/setting [post]
 func CreateSetting(c *gin.Context) {
 	var setting models.SettingModel
 	c.BindJSON(&setting)
@@ -32,6 +50,15 @@ func CreateSetting(c *gin.Context) {
 	}
 }
 
+// Get Setting by Id godoc
+// @Summary get setting by id endpoint
+// @Schemes
+// @Description get setting by id endpoint
+// @Tags setting
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /settings/setting/:id [get]
 func GetSettingByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var setting models.SettingModel
@@ -43,6 +70,15 @@ func GetSettingByID(c *gin.Context) {
 	}
 }
 
+// Update Setting godoc
+// @Summary update setting endpoint
+// @Schemes
+// @Description update setting endpoint
+// @Tags setting
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /settings/setting [put]
 func UpdateSetting(c *gin.Context) {
 	var setting models.SettingModel
 	id := c.Params.ByName("id")
@@ -59,6 +95,15 @@ func UpdateSetting(c *gin.Context) {
 	}
 }
 
+// Delete Setting godoc
+// @Summary delete setting endpoint
+// @Schemes
+// @Description delete setting endpoint
+// @Tags setting
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /settings/setting [delete]
 func DeleteSetting(c *gin.Context) {
 	var setting models.SettingModel
 	id := c.Params.ByName("id")

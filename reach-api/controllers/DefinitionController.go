@@ -10,6 +10,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Get Definition godoc
+// @Summary get definition endpoint
+// @Schemes
+// @Description get definition endpoint
+// @Tags definition
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /definition [get]
 func GetDefinition(c *gin.Context) {
 	var definition []models.DefinitionModel
 	err := repositories.GetAllDefinitions(&definition)
@@ -20,6 +29,15 @@ func GetDefinition(c *gin.Context) {
 	}
 }
 
+// Post Definition godoc
+// @Summary post definition endpoint
+// @Schemes
+// @Description post definition endpoint
+// @Tags definition
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /definition [post]
 func CreateDefinition(c *gin.Context) {
 	var definition models.DefinitionModel
 	c.BindJSON(&definition)
@@ -32,6 +50,15 @@ func CreateDefinition(c *gin.Context) {
 	}
 }
 
+// Get Definition by Id godoc
+// @Summary get definition by id endpoint
+// @Schemes
+// @Description get definition by id endpoint
+// @Tags definition
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /definition/:id [get]
 func GetDefinitionByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var definition models.DefinitionModel
@@ -43,6 +70,15 @@ func GetDefinitionByID(c *gin.Context) {
 	}
 }
 
+// Update Definition godoc
+// @Summary update definition endpoint
+// @Schemes
+// @Description update definition endpoint
+// @Tags definition
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /definition [put]
 func UpdateDefinition(c *gin.Context) {
 	var definition models.DefinitionModel
 	id := c.Params.ByName("id")
@@ -59,6 +95,15 @@ func UpdateDefinition(c *gin.Context) {
 	}
 }
 
+// Delete Definition godoc
+// @Summary delete definition endpoint
+// @Schemes
+// @Description delete definition endpoint
+// @Tags definition
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /definition [delete]
 func DeleteDefinition(c *gin.Context) {
 	var definition models.DefinitionModel
 	id := c.Params.ByName("id")

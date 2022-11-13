@@ -10,6 +10,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Get Reply godoc
+// @Summary get reply endpoint
+// @Schemes
+// @Description get reply endpoint
+// @Tags reply
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /reply [get]
 func GetReply(c *gin.Context) {
 	var reply []models.ReplyModel
 	err := repositories.GetAllReplies(&reply)
@@ -20,6 +29,15 @@ func GetReply(c *gin.Context) {
 	}
 }
 
+// Post Reply godoc
+// @Summary post reply endpoint
+// @Schemes
+// @Description post reply endpoint
+// @Tags reply
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /reply [post]
 func CreateReply(c *gin.Context) {
 	var reply models.ReplyModel
 	c.BindJSON(&reply)
@@ -32,6 +50,15 @@ func CreateReply(c *gin.Context) {
 	}
 }
 
+// Get Reply by Id godoc
+// @Summary get reply by id endpoint
+// @Schemes
+// @Description get reply by id endpoint
+// @Tags reply
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /reply/:id [get]
 func GetReplyByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var reply models.ReplyModel
@@ -43,6 +70,15 @@ func GetReplyByID(c *gin.Context) {
 	}
 }
 
+// Update Reply godoc
+// @Summary update reply endpoint
+// @Schemes
+// @Description update reply endpoint
+// @Tags reply
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /reply [put]
 func UpdateReply(c *gin.Context) {
 	var reply models.ReplyModel
 	id := c.Params.ByName("id")
@@ -59,6 +95,15 @@ func UpdateReply(c *gin.Context) {
 	}
 }
 
+// Delete Reply godoc
+// @Summary delete reply endpoint
+// @Schemes
+// @Description delete reply endpoint
+// @Tags reply
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /reply [delete]
 func DeleteReply(c *gin.Context) {
 	var reply models.ReplyModel
 	id := c.Params.ByName("id")

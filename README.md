@@ -24,7 +24,7 @@ sudo docker run --name sch-mariadb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=some_pass
 
 ## Endpoints
 
-- Swagger - [http://localhost:1989/api/](http://localhost:1989/api/)
+- Swagger - [http://localhost:1989/swagger/index.html](http://localhost:1989/swagger/index.html)
 
 ## Stay in touch
 

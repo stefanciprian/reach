@@ -10,6 +10,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Get User godoc
+// @Summary get user endpoint
+// @Schemes
+// @Description get user endpoint
+// @Tags user
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /users/user [get]
 func GetUser(c *gin.Context) {
 	var user []models.UserModel
 	err := repositories.GetAllUsers(&user)
@@ -20,6 +29,15 @@ func GetUser(c *gin.Context) {
 	}
 }
 
+// Post User godoc
+// @Summary post user endpoint
+// @Schemes
+// @Description post user endpoint
+// @Tags user
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /users/user [post]
 func CreateUser(c *gin.Context) {
 	var user models.UserModel
 	c.BindJSON(&user)
@@ -32,6 +50,15 @@ func CreateUser(c *gin.Context) {
 	}
 }
 
+// Get User by Id godoc
+// @Summary get user by id endpoint
+// @Schemes
+// @Description get user by id endpoint
+// @Tags user
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /users/user/:id [get]
 func GetUserByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var user models.UserModel
@@ -43,6 +70,15 @@ func GetUserByID(c *gin.Context) {
 	}
 }
 
+// Update User godoc
+// @Summary update user endpoint
+// @Schemes
+// @Description update user endpoint
+// @Tags user
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /users/user [put]
 func UpdateUser(c *gin.Context) {
 	var user models.UserModel
 	id := c.Params.ByName("id")
@@ -59,6 +95,15 @@ func UpdateUser(c *gin.Context) {
 	}
 }
 
+// Delete User godoc
+// @Summary delete user endpoint
+// @Schemes
+// @Description delete user endpoint
+// @Tags user
+// @Accept json
+// @Produce json
+// @Success 200 {param HelloResponse} HelloResponse
+// @Router /users/user [delete]
 func DeleteUser(c *gin.Context) {
 	var user models.UserModel
 	id := c.Params.ByName("id")
