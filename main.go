@@ -37,6 +37,7 @@ func main() {
 		&models.OutputSourceModel{},
 		&models.ReplyModel{},
 		&models.SettingModel{},
+		&models.SummaryModel{},
 		&models.TransformerModel{},
 		&models.UserModel{})
 

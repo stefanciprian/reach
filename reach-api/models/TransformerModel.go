@@ -1,9 +1,11 @@
 package models
 
+import "gorm.io/gorm"
+
 type TransformerModel struct {
-	Id uint `json:"id"`
+	gorm.Model
 }
 
 func (b *TransformerModel) TableName() string {
-	return "transformer"
+	return "transformers"
 }

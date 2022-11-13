@@ -1,7 +1,9 @@
 package models
 
+import "gorm.io/gorm"
+
 type UserModel struct {
-	Id      uint   `json:"id"`
+	gorm.Model
 	Name    string `json:"name"`
 	Email   string `json:"email"`
 	Phone   string `json:"phone"`
@@ -9,5 +11,5 @@ type UserModel struct {
 }
 
 func (b *UserModel) TableName() string {
-	return "user"
+	return "users"
 }
